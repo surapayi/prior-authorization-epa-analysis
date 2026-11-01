@@ -14,15 +14,15 @@
 
 These come from walking through the as-is flow. They are reasoned from the process and supported by general sources where noted, not measured at a real clinic.
 
-| # | Pain point | Where in the flow | Affects |
+| ID | Pain point | Where in the flow | Affects |
 |---|---|---|---|
-| 1 | Staff look up coverage and PA rules by hand. Rules differ by payer and plan. | Active coverage? / PA required? | Staff effort |
-| 2 | The packet is pulled together by hand from the EHR (notes, history, forms). | Assemble packet from EHR | Staff effort |
-| 3 | Each payer has its own portal, fax, or form, so the same data is typed again. | Fill in details on payer's portal | Staff effort |
-| 4 | Missing information is found only after submission, which causes rework and delay. | Packet complete? (No) | Both |
-| 5 | Staff keep calling or checking the portal for status. | Follow up with payer | Both |
-| 6 | The decision is typed into the EHR and billing by hand, and the scheduling team is told manually. | Logs auth number into EHR | Staff effort |
-| 7 | The patient's scan waits until the response is seen and acted on. | Whole wait period | Turnaround |
+| PP-01 | Staff look up coverage and PA rules by hand. Rules differ by payer and plan. | Active coverage? / PA required? | Staff effort |
+| PP-02 | The packet is pulled together by hand from the EHR (notes, history, forms). | Assemble packet from EHR | Staff effort |
+| PP-03 | Each payer has its own portal, fax, or form, so the same data is typed again. | Fill in details on payer's portal | Staff effort |
+| PP-04 | Missing information is found only after submission, which causes rework and delay. | Packet complete? (No) | Both |
+| PP-05 | Staff keep calling or checking the portal for status. | Follow up with payer | Both |
+| PP-06 | The decision is typed into the EHR and billing by hand, and the scheduling team is told manually. | Logs auth number into EHR | Staff effort |
+| PP-07 | The patient's scan waits until the response is seen and acted on. | Whole wait period | Turnaround |
 
 ## Supporting context from sources
 
