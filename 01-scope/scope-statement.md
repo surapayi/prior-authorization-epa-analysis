@@ -21,6 +21,8 @@ How much could automated ePrior Authorization (ePA), using FHIR standards, reduc
 
 ## Time markers
 
+These markers define when each KPI starts and stops. They are shown on the swimlanes in [`02-as-is`](../02-as-is/as-is-swimlane.png) and [`03-to-be`](../03-to-be/to-be-swimlane.png).
+
 - **T0:** order created in the EHR
 - **T1:** request submitted to the payer
 - **T2:** response received by the clinic
@@ -30,9 +32,11 @@ How much could automated ePrior Authorization (ePA), using FHIR standards, reduc
 | KPI | Definition | Formula |
 |---|---|---|
 | Turnaround time | Calendar time from order created to response received. Includes the payer's wait. | T2 − T0 |
-| Clinic staff effort per PA | Active staff minutes on the Clinic staff lane steps. Waiting time is not counted. | Prep and submission minutes + (follow-up attempts × minutes per attempt) + minutes to log the decision |
+| Clinic staff effort per PA | Active staff minutes on the clinic staff steps in the swimlane. Waiting time is not counted. | Prep and submission minutes + (follow-up attempts × minutes per attempt) + minutes to log the decision |
 | Cost per PA (clinic side) | Cost of that staff effort. | Staff effort minutes ÷ 60 × hourly labor rate |
 | First-pass rate (optional) | Share of PA requests the payer accepts as complete on the first submission, with no return for missing information. | Requests accepted on the first try ÷ all requests |
+
+Baseline values are in [`02-as-is/as-is-baseline.md`](../02-as-is/as-is-baseline.md). To-be targets are in [`03-to-be/to-be-kpis.md`](../03-to-be/to-be-kpis.md).
 
 ## Out of scope
 
@@ -44,7 +48,7 @@ How much could automated ePrior Authorization (ePA), using FHIR standards, reduc
 
 CMS's Interoperability and Prior Authorization final rule (CMS-0057-F) set faster decision timeframes for covered payers starting in 2026: 72 hours for expedited requests and 7 calendar days for standard ones. It also requires FHIR-based prior authorization APIs by 2027. As I understand it, the rule applies to certain government-program plans, such as Medicare Advantage, Medicaid, and CHIP, and covers medical items and services, not drugs. See [sources](sources.md).
 
-## Planned future state
+## Future state
 
 Automated ePA using HL7 FHIR, with the Da Vinci implementation guides:
 
@@ -52,12 +56,8 @@ Automated ePA using HL7 FHIR, with the Da Vinci implementation guides:
 - **DTR** (Documentation Templates and Rules): what information does the payer need?
 - **PAS** (Prior Authorization Support): submit the request and get the answer back.
 
-The future-state design will be in `03-to-be`.
+The future-state swimlane is in [`03-to-be`](../03-to-be/).
 
-## Assumptions and limits
+## Limits and risks
 
-- No real clinic data. The as-is flow is built from public sources and general knowledge.
-- Baseline values are reference estimates from published sources, not measured.
-- Washington-based inputs are used where data exists (payer decision time, labor cost). National figures are shown as a cross-check.
-- ePA reduces manual work but does not remove the need for clinical review on some requests.
-- Payer behavior varies by plan and payer type.
+This is a self-directed portfolio project with no real clinic data. See [limits-and-risks.md](limits-and-risks.md) for what the project does not cover and what could weaken its conclusions.
