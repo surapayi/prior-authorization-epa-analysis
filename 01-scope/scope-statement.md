@@ -34,7 +34,6 @@ These markers define when each KPI starts and stops. They are shown on the swiml
 | Turnaround time | Calendar time from order created to response received. Includes the payer's wait. | T2 − T0 |
 | Clinic staff effort per PA | Active staff minutes on the clinic staff steps in the swimlane. Waiting time is not counted. | Prep and submission minutes + (follow-up attempts × minutes per attempt) + minutes to log the decision |
 | Cost per PA (clinic side) | Cost of that staff effort. | Staff effort minutes ÷ 60 × hourly labor rate |
-| First-pass rate (optional) | Share of PA requests the payer accepts as complete on the first submission, with no return for missing information. | Requests accepted on the first try ÷ all requests |
 
 Baseline values are in [`02-as-is/as-is-baseline.md`](../02-as-is/as-is-baseline.md). To-be targets are in [`03-to-be/to-be-kpis.md`](../03-to-be/to-be-kpis.md).
 
