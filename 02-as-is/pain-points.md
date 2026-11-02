@@ -26,14 +26,9 @@ These come from walking through the as-is flow. They are reasoned from the proce
 
 ## Supporting context from sources
 
-- Manual PAs often depend on phone and fax contact, according to the CAQH Index.
+- CAQH defines a manual transaction as one done by phone, fax, or mail, with no electronic exchange.
 - In the AMA survey, about 40% of physicians said they have staff who work only on prior authorization.
 - In the AMA survey, 95% of physicians said PA delays access to necessary care.
 
-See [sources](../01-scope/sources.md) for links and limits.
+See [sources.md](../01-scope/sources.md) for links and limits.
 
-## Still to validate
-
-- Compare the step order with a few payer or provider PA instruction pages for MRI.
-- Check whether clinicians are usually pulled in for added notes or sign-off when information is missing.
-- Check how payers notify clinics of decisions (portal, fax, phone, email alert).
