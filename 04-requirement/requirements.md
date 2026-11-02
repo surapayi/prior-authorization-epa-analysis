@@ -45,7 +45,7 @@ This page lists what the to-be process needs to do. Each requirement points back
 | ID | Requirement | Pain point | Stakeholder | Priority | Side |
 |---|---|---|---|---|---|
 | FR-07 | The DTR app shall load the payer's questionnaire for the order. | PP-02, PP-04 | SH-03 | Must | Provider |
-| FR-08 | The DTR app shall fill in questionnaire answers from EHR data. | PP-02, PP-03 | SH-03 | Must | Provider |
+| FR-08 | he DTR app shall fill in questionnaire answers from EHR data using Clinical Quality Language (CQL). | PP-02, PP-03 | SH-03 | Must | Provider |
 | FR-09 | The DTR app shall show staff which required answers are still missing before submission. | PP-04 | SH-03 | Must | Provider |
 | FR-10 | The EHR shall not allow submission until required answers are complete and staff have marked the questionnaire complete. | PP-04 | SH-03, SH-06 | Must | Provider |
 
@@ -54,14 +54,14 @@ This page lists what the to-be process needs to do. Each requirement points back
 | ID | Requirement | Pain point | Stakeholder | Priority | Side |
 |---|---|---|---|---|---|
 | FR-11 | Staff shall be able to submit the request from the EHR with one action. | PP-03 | SH-03 | Must | Provider |
-| FR-12 | The PAS client shall build a FHIR Claim bundle that includes the completed questionnaire and send it to the payer's PAS. | PP-03 | SH-04 | Must | Provider |
-| FR-13 | The payer shall accept the bundle and, if its systems need it, convert it to an X12 278 transaction. | PP-03 | SH-05 | Could | Payer |
+| FR-12 | Upon completion, the DTR app shall save a FHIR QuestionnaireResponse back to the EHR. The PAS client shall use this saved response to build the FHIR Claim bundle. | PP-03 | SH-04 | Must | Provider |
+| FR-13 | The payer shall accept the bundle and, if its systems need it, convert it to an X12 278 transaction for internal processing, and translate the response back to a FHIR ClaimResponse for transmission to the provider. | PP-03 | SH-05 | Could | Payer |
 
 ### D. Payer decision
 
 | ID | Requirement | Pain point | Stakeholder | Priority | Side |
 |---|---|---|---|---|---|
-| FR-14 | The payer's PAS shall check the request against utilization management criteria and approve it automatically when the criteria are met. | PP-07 | SH-05 | Should | Payer |
+| FR-14 | The payer's PAS shall check the request against utilization management criteria and approve it automatically when the criteria are met. | PP-07 | SH-05 | Must | Payer |
 | FR-15 | Requests that are not approved automatically shall be queued for a payer UM reviewer (RN or Medical Director). | PP-07 | SH-06 | Must | Payer |
 | FR-16 | The payer shall return the final decision electronically as a ClaimResponse (approved with an authorization number, or denied). | PP-05, PP-06 | SH-05 | Must | Payer |
 
@@ -86,9 +86,9 @@ This page lists what the to-be process needs to do. Each requirement points back
 |---|---|---|---|
 | NFR-01 | Patient data shall be protected in transit and access shall be authorized. Calls between the EHR, DTR app, and payer shall use secure, authorized connections. | SH-04, SH-05 | Must |
 | NFR-02 | The system shall keep an audit trail of what was sent, when, by whom, and what came back. | SH-04, SH-07 | Must |
-| NFR-03 | Exchanges shall use FHIR and the Da Vinci CRD, DTR, and PAS implementation guides. *(Version to confirm.)* | SH-04, SH-05 | Must |
-| NFR-04 | The CRD check shall not noticeably slow down signing an order. | SH-02 | Must |
-| NFR-05 | Staff shall be able to open and complete DTR from inside the EHR workflow without a separate login. | SH-03 | Should |
+| NFR-03 | Exchanges shall use FHIR and the Da Vinci CRD, DTR, and PAS implementation guides. (v2.1.0, or latest version supported by the target payer) | SH-04, SH-05 | Must |
+| NFR-04 | The CRD check happens synchronously during the ordering workflow. | SH-02 | Must |
+| NFR-05 | The DTR app shall launch as a native SMART on FHIR application inside the EHR workflow, utilizing OAuth2 for seamless authentication without a separate login. | SH-03 | Should |
 | NFR-06 | If the CRD call fails, or the payer does not support these APIs, the order shall go on and the clinic shall use the as-is process. | SH-03, SH-07 | Must |
 
 ## Pain point coverage
@@ -103,10 +103,8 @@ This page lists what the to-be process needs to do. Each requirement points back
 | PP-06 Decision typed in by hand, scheduling told manually | FR-16, FR-17, FR-18 | |
 | PP-07 Scan waits for the response | FR-14, FR-15, FR-18 | Mostly depends on the payer, so the clinic controls only part of it |
 
-## Gaps and open questions
+## Note
 
-- **No pain point behind FR-19 and FR-21.** FR-19 comes from the denial path in the swimlane, and FR-21 comes from the KPIs. Either add a pain point for the denial path or leave them as they are.
-- **Pended status.** The PAS can return an interim "pended" response, but the to-be swimlane does not show it. FR-20 covers status display in general. Decide whether to add a pended step to the diagram or note it as a limit.
-- **Payer-side requirements are assumptions.** FR-02, FR-13 to FR-16 describe what the payer is expected to do. See [limits-and-risks](../01-scope/limits-and-risks.md). *(Update this path when the folders are final.)*
-- **Da Vinci details to verify.** Check FR-01 to FR-12 against the CRD, DTR, and PAS guides, and record the version in NFR-03.
+- **No pain point behind FR-19 and FR-21.** FR-19 comes from the denial path in the swimlane, and FR-21 comes from the KPIs. 
+- **Pended status.** The PAS can return an interim “pended” response when the payer needs more information. It is not modeled here because it would add extra steps and loops to a diagram meant to show the main path. A pended request would lengthen turnaround and add staff effort, so the results may understate both.
 - **Priorities are my judgment.** They have not been checked with real stakeholders.
