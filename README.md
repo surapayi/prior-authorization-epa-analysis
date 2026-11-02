@@ -2,9 +2,9 @@
 
 ![As-is swimlane: manual prior authorization for an outpatient MRI](02-as-is/as-is-swimlane.png)
 
-**Status:** In progress. The scope, as-is process, pain points, and baseline KPIs are done. The to-be design, requirements, FHIR data mapping, and risks are next.
+**Status:** In progress. The scope, as-is process, pain points, baseline KPIs, and to-be swimlane are done. The to-be KPI targets, requirements, and FHIR data mapping are next.
 
-**Author:** [add your name and LinkedIn link]
+**Author:** Surapa Yi
 
 ## The problem
 
@@ -18,17 +18,17 @@ One use case: an outpatient MRI order placed at a clinic, with the health plan (
 
 > How much could automated ePrior Authorization (ePA), using FHIR standards, reduce (1) the time from order creation to payer response, and (2) the clinic's staff effort and cost per PA?
 
-## What's in this repo
+## How to read this repo
+
+Start with the scope, then follow the story: how PA works today, how it could work with ePA, and what a system would need to do.
 
 | Folder | What's inside | Status |
 |---|---|---|
-| [01-scope](01-scope/) | One-page scope statement, sources list | Done |
-| [02-as-is](02-as-is/) | Current-state swimlane, pain points | Done |
-| 03-to-be | Future-state swimlane with ePA | Next |
-| 04-requirements | Stakeholders, user stories, FHIR data mapping | Planned |
-| [05-metrics](05-metrics/) | KPIs and as-is baseline values | Done |
-| 06-risks | Risks and limits | Planned |
+| `01-scope` | Scope statement and KPI definitions, limits and risks, sources | Done |
+| `02-as-is` | Current-state swimlane, pain points, baseline KPI values | Done |
+| `03-to-be` | Future-state swimlane with ePA, to-be KPI targets | In progress |
+| `04-requirements` | Stakeholders, requirements, user stories, FHIR data mapping, traceability | In progress |
 
 ## A note on the numbers
 
-This is a self-directed portfolio project. I did not work with a real clinic or real patient data. The as-is flow is built from public sources and general knowledge. The baseline numbers are reference estimates from published sources (listed in [sources](01-scope/sources.md)), not measurements. ePA should reduce manual work, not remove it. Some requests will always need clinical review.
+This is a self-directed portfolio project. I did not work with a real clinic or real patient data. The as-is flow is built from public sources and general knowledge. The baseline numbers are reference estimates from published sources (listed in `01-scope/sources.md`), not measurements. The to-be numbers are targets, not results. ePA should reduce manual work, not remove it. Some requests will always need clinical review.
