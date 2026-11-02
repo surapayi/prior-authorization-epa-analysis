@@ -1,6 +1,6 @@
 # Sources
 
-Every number in this project comes from one of these. Please open each link before publishing and confirm the figure still matches.
+Every number in this project comes from one of these.
 
 | Source | What I used it for | Year | Scope and limits | Link |
 |---|---|---|---|---|
