@@ -30,13 +30,6 @@ Read each row left to right: a **pain point** in the as-is flow is fixed by a **
 | FR-19 Notify clinician on denial | Denial path in the swimlane | Determine next steps / Modify or cancel order | US-07 | None |
 | FR-21 Record T0, T1, and T2 timestamps | The KPIs | T0, T1, T2 markers | None | KPI-01 (makes it measurable) |
 
-## Checks
-
-- **Every pain point has at least one requirement and one story.** PP-01 to PP-07 are all covered.
-- **Every functional requirement appears at least once above** (FR-01 to FR-21).
-- **FR-13, FR-14, FR-16, and FR-21 have no story of their own.** They are payer-side, technical, or measurement items. They appear here through the pain point or KPI they support.
-- **NFR-01 to NFR-06 are not traced here.** They apply across the whole flow and are listed in the requirements page.
-- **PP-07 is only partly in the clinic's control.** Most of the wait is payer time, so KPI-01 depends on the payer's behavior as well as the clinic's changes.
 
 ## Notes
 
