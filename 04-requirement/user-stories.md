@@ -133,9 +133,8 @@ As a **payer UM reviewer**, I want requests that need review to arrive with the 
 | US-08 | FR-20 |
 | US-09 | FR-12, FR-15 |
 
-**Not covered by a story:** FR-13 (X12 278 conversion), FR-14 (automatic approval), FR-16 (payer returns the ClaimResponse), FR-21 (timestamps), and the NFRs. These are technical, payer-side, or measurement items, and they don't have a user who would ask for them directly. FR-21 could become a story for the clinic operations manager (SH-07) if you keep that stakeholder.
-
+**Not covered by a story:** FR-13 (X12 278 conversion), FR-14 (automatic approval), FR-16 (payer returns the ClaimResponse), FR-21 (timestamps), and the NFRs. These are technical, payer-side, or measurement items, and they don't have a user who would ask for them directly.
 ## Notes
 
 - Priorities and acceptance criteria are my own draft. They have not been checked with real users.
-- Payer-side behavior is an assumption. See [limits-and-risks](../01-scope/limits-and-risks.md). *(Update this path when the folders are final.)*
+- Payer-side behavior is an assumption. See [limits-and-risks](../01-scope/limits-and-risks.md).
