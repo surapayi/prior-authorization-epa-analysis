@@ -27,12 +27,12 @@ How much could automated ePrior Authorization (ePA), using FHIR standards, reduc
 
 ## Measures (KPIs)
 
-Full definitions, formulas, and as-is values are in [kpis-and-baselines](../05-metrics/kpis-and-baselines.md).
-
-- **Turnaround time:** T0 to T2
-- **Clinic staff effort per PA:** active staff minutes only. Waiting time is not counted.
-- **Cost per PA (clinic side):** staff minutes × hourly labor rate
-- **First-pass rate (optional):** share of requests accepted as complete on the first submission
+| KPI | Definition | Formula |
+|---|---|---|
+| Turnaround time | Calendar time from order created to response received. Includes the payer's wait. | T2 − T0 |
+| Clinic staff effort per PA | Active staff minutes on the Clinic staff lane steps. Waiting time is not counted. | Prep and submission minutes + (follow-up attempts × minutes per attempt) + minutes to log the decision |
+| Cost per PA (clinic side) | Cost of that staff effort. | Staff effort minutes ÷ 60 × hourly labor rate |
+| First-pass rate (optional) | Share of PA requests the payer accepts as complete on the first submission, with no return for missing information. | Requests accepted on the first try ÷ all requests |
 
 ## Out of scope
 
