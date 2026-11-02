@@ -15,25 +15,6 @@ This page lists who is involved in the PA process, what each group needs, and wh
 | SH-04 | EHR / IT team | EHR, Da Vinci apps (provider side) | Supports the CDS hook, DTR launch, PAS client, and ClaimResponse in the EHR | Stable integration, security, easy upkeep | Builds and maintains the integration |
 | SH-05 | Payer systems team | Da Vinci apps (payer side) | Runs the CRD, DTR questionnaire, and PAS services | Correct, complete requests; standard formats | Provides the payer-side services |
 | SH-06 | Payer UM reviewer (RN / Medical Director) | Payer | Reviews cases the system can't approve automatically and makes the final decision | Complete clinical documentation, clear criteria | Decision maker on flagged cases |
-| SH-07 | Clinic operations manager *(optional)* | Not in swimlane | Owns staff workload and the cost of PA work | Lower cost per PA, shorter turnaround | Sponsor of the change |
-
-*SH-07 does not have a swimlane lane. Keep it if you want a business owner for the cost KPI, or delete it to match the swimlane exactly.*
-
-## Stakeholder notes
-
-Fill this in for each stakeholder you want to explain further. Keep it to 2 or 3 lines each.
-
-### SH-03 Clinic staff
-- **Current pain (as-is):** *(link to PP-xx)*
-- **What changes in the to-be:** *(for example, DTR pre-fills the questionnaire, so staff review instead of re-enter)*
-- **Related requirements:** *(FR-xx, filled in later)*
-
-### SH-06 Payer UM reviewer
-- **Current pain (as-is):** *(link to PP-xx)*
-- **What changes in the to-be:** *(for example, cases arrive with structured data)*
-- **Related requirements:** *(FR-xx, filled in later)*
-
-*(Repeat for the others as needed.)*
 
 ## Influence and interest
 
@@ -52,4 +33,4 @@ A quick view of who needs the most attention when designing the change.
 ## Assumptions
 
 - The ratings above are my own judgment, based on public sources and the swimlane. They have not been checked with real stakeholders.
-- See [limits-and-risks](../01-scope/limits-and-risks.md) for the project's other limits. *(Update this path when the folders are final.)*
+- See [limits-and-risks](../01-scope/limits-and-risks.md) for the project's other limits.
