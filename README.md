@@ -34,7 +34,7 @@ Start with the scope, then follow the story: how PA works today, how it could wo
 
 This is a self-directed portfolio project. I did not work with a real clinic or real patient data. The as-is flow is built from public sources and general knowledge. The baseline numbers are reference estimates from published sources (listed in `01-scope/sources.md`), not measurements. The to-be numbers are targets, not results. ePA should reduce manual work, not remove it. Some requests will always need clinical review.
 
-
+----------------------------------------------------------------------------------------------------------
 ## About this project
 
 I built this project to apply what I learned in healthcare IT courses (EHR and FHIR) to a real business problem in healthcare workflow: prior authorization for an outpatient MRI order. It compares the manual process today with an automated process using HL7 Da Vinci.
