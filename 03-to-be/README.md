@@ -70,4 +70,6 @@ The same KPIs from the scope statement are used here. See [to-be-kpis.md](to-be-
 - To-be values will be estimates from published sources and stated assumptions. They are not observed results.
 - Real results would depend on the payer supporting Da Vinci, the EHR vendor's integration, and the clinic's setup.
 
-Previous: [02-as-is](../02-as-is/)
+## Previous
+
+The as-is design is in [02-as-is](../02-as-is/).
