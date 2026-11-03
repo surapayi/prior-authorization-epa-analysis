@@ -27,8 +27,8 @@ Start with the scope, then follow the story: how PA works today, how it could wo
 |---|---|---|
 | `01-scope` | Scope statement and KPI definitions, limits and risks, sources | Done |
 | `02-as-is` | Current-state swimlane, pain points, baseline KPI values | Done |
-| `03-to-be` | Future-state swimlane with ePA, to-be KPI targets | In progress |
-| `04-requirements` | Stakeholders, requirements, user stories, FHIR data mapping, traceability | In progress |
+| `03-to-be` | Future-state swimlane with ePA, to-be KPI targets | Done |
+| `04-requirements` | Stakeholders, requirements, user stories, FHIR data mapping, traceability | To review |
 
 ## A note on the numbers
 
