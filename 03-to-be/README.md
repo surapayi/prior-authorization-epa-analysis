@@ -1,4 +1,4 @@
-# 03 To-Be: Automated PA with HL7 Da Vinci
+# 03 To-Be: Automated Prior Authorization with HL7 Da Vinci
 
 This folder describes the future process for an outpatient MRI prior authorization (PA) when the clinic uses the HL7 Da Vinci FHIR implementation guides: CRD, DTR, and PAS.
 
@@ -48,13 +48,17 @@ I use the same three time points as the as-is process, so the KPIs compare direc
 
 ## What changes from as-is
 
-- **Coverage and PA-required checks happen inside the EHR** at order entry. Staff no longer look them up on a payer portal or by phone.
-- **Documentation is auto-populated from the EHR.** Staff review and fill gaps instead of building the packet by hand.
-- **Submission is one click.** The request is sent electronically as a FHIR bundle.
-- **Some requests are approved automatically.** Only requests that do not meet the criteria go to manual payer review.
-- **The payer response returns directly to the EHR.** Staff do not need to follow up repeatedly.
+| Step | As-is | To-be |
+|---|---|---|
+| Coverage and PA-required checks | Clinic staff check after the order is created | CRD checks automatically at order entry, through the CDS hook in the EHR |
+| Documentation | Staff assemble the packet from the EHR by hand | DTR auto-populates a questionnaire from the EHR; staff review and fill gaps |
+| Submission | Staff enter details on the payer's portal and upload documents, or fax them; then log the reference number in the EHR | Staff click submit in the EHR; PAS sends a FHIR Claim bundle |
+| Completeness check | Payer screens, and incomplete packets go back to staff | Questionnaire is completed before submission |
+| Follow-up | Staff follow up with the payer until a response arrives | Payer PAS returns a ClaimResponse to the EHR |
+| Decision | Every request gets a clinical review | Requests that meet criteria are approved automatically; the rest go to an RN or medical director |
+| Logging the result | Staff log the authorization number in the EHR and billing system | Response arrives in the EHR |
 
-The clinician and the patient steps stay the same. The change is mainly in clinic staff work and in payer wait time.
+The patient and clinician steps stay the same. The change is mainly in clinic staff work and payer wait time.
 
 ## KPIs
 
@@ -65,3 +69,5 @@ The same KPIs from the scope statement are used here. See [to-be-kpis.md](to-be-
 - This is a modeled future state, not a measurement from a real clinic.
 - To-be values will be estimates from published sources and stated assumptions. They are not observed results.
 - Real results would depend on the payer supporting Da Vinci, the EHR vendor's integration, and the clinic's setup.
+
+Previous: [02-as-is](../02-as-is/)
